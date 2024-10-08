@@ -97,3 +97,59 @@ Nah selanjutnya tekan tombol Create pull request.
 ![fork](screenshot/image-5.png)
 
 
+Berikut adalah tambahan section untuk petunjuk **Sync Fork**:
+
+---
+
+## Sinkronisasi Fork
+
+Jika repositori asli mengalami perubahan setelah kamu melakukan fork, kamu bisa menyinkronkan fork kamu dengan langkah-langkah berikut:
+
+### 1. Tambahkan remote upstream
+Pastikan kamu menambahkan repositori asli sebagai `upstream` di fork kamu. Jalankan perintah berikut di terminal:
+
+```
+git remote add upstream https://github.com/qadrLabs/belajar-kontribusi.git
+```
+
+Perintah ini akan menambahkan repositori asli sebagai referensi `upstream`, yang memungkinkan kamu untuk menarik perubahan dari sana.
+
+### 2. Cek remote yang sudah ditambahkan
+Untuk memastikan bahwa remote `upstream` sudah ditambahkan dengan benar, gunakan perintah berikut:
+
+```
+git remote -v
+```
+
+Perintah ini akan menampilkan daftar semua remote yang terhubung ke fork kamu, baik `origin` (fork kamu) maupun `upstream` (repositori asli).
+
+### 3. Tarik perubahan dari upstream
+Untuk menarik perubahan terbaru dari repositori asli (upstream), jalankan perintah berikut:
+
+```
+git fetch upstream
+```
+
+Perintah ini akan mengambil (fetch) semua perubahan dari repositori asli tanpa menggabungkannya ke dalam fork kamu.
+
+### 4. Gabungkan perubahan dari upstream ke branch lokal
+Setelah menarik perubahan, kamu bisa menggabungkannya ke branch `main` lokal kamu:
+
+```
+git merge upstream/main
+```
+
+Ini akan menggabungkan semua perubahan dari branch `main` di upstream ke branch `main` lokal kamu.
+
+### 5. Push ke Fork kamu
+Terakhir, setelah branch lokal kamu diperbarui, kamu bisa mendorong perubahan ini ke fork kamu di GitHub dengan perintah berikut:
+
+```
+git push origin main
+```
+
+Setelah melakukan ini, fork kamu sudah sinkron dengan repositori asli.
+
+---
+
+Dengan mengikuti langkah-langkah di atas, kamu bisa menjaga fork kamu tetap diperbarui dengan repositori asli, sehingga memudahkan untuk berkontribusi ke project open-source!
