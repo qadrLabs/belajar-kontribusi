@@ -97,10 +97,6 @@ Nah selanjutnya tekan tombol Create pull request.
 ![fork](screenshot/image-5.png)
 
 
-Berikut adalah tambahan section untuk petunjuk **Sync Fork**:
-
----
-
 ## Sinkronisasi Fork
 
 Jika repositori asli mengalami perubahan setelah kamu melakukan fork, kamu bisa menyinkronkan fork kamu dengan langkah-langkah berikut:
@@ -149,7 +145,3 @@ git push origin main
 ```
 
 Setelah melakukan ini, fork kamu sudah sinkron dengan repositori asli.
-
----
-
-Dengan mengikuti langkah-langkah di atas, kamu bisa menjaga fork kamu tetap diperbarui dengan repositori asli, sehingga memudahkan untuk berkontribusi ke project open-source!
